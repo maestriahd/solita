@@ -23,24 +23,19 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-#wrap {
-    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
-    margin: auto;
-    overflow: hidden;
-}
+
+
+
 #search-container{
     width: 100%;
     margin-right: 0;
 }
 
 .nav-menu {
-    width: 100%; 
+    width: 100%;
     margin-right: 0;
 }
 
-header {
-    padding: 0 $spacing-unit;
-}
 
 #content {
     width: 100%;
@@ -75,7 +70,7 @@ header {
 }
 
 footer {
-    @include span(12);
+    //@include span(12);
     margin-right: 0;
 }
 
@@ -102,9 +97,9 @@ body {
 .collection,
 .exhibit,
 .hTagcloud {
-    margin:1em 0;
-    overflow: hidden;
-    clear:both;
+    //margin:1em 0;
+    //overflow: hidden;
+    //clear:both;
 }
 
 #featured-item,
@@ -113,26 +108,14 @@ body {
 #recent-items {
     overflow: hidden;
     margin:1em 0 0;
-
     h2,
     h3,
     .item,
     .collection,
     .exhibit {
-        padding: 0;
+        //padding: 0;
     }
 
-    h2 {
-        padding-top: $spacing-unit;
-    }
-
-    .image {
-        margin-top: $spacing-unit;
-    }
-
-    img {
-        float: right;
-    }
 }
 
 #skipnav {
@@ -189,11 +172,6 @@ blockquote {
     margin-top:1em;
 }
 
-footer {
-    padding:.5em 0;
-    overflow: auto;
-    border-top:5px double $grey-light;
-}
 /* -------------------------------------------------------------------------*/
 /* Headings */
 
@@ -273,18 +251,7 @@ a {
 
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
-.navigation,
-    #sort-links {
-        list-style:none;
-        padding:0;
-        ul {
-            margin:0;
-            padding:0;
-        }
-        li {
-            display:inline;
-        }
-}
+
 
 .asc a:after,
 .desc a:after {
@@ -535,11 +502,7 @@ input[type=password] {
     padding: (.25 * $spacing-unit);
 }
 
-input[type=submit],
-button,
-.button {
-    @include link-button;
-}
+
 
 .button:focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -840,22 +803,10 @@ body.files .item-file {
     }
 }
 
-.image {
-    float: right;
-    margin: 0 0 $spacing-unit $spacing-unit;
-    height: (5 * $spacing-unit);
-
-    img {
-        float: left;
-        height: 100%;
-        width: auto;
-    }
-}
-
 .collection .image img,
 .exhibit .image img {
-    box-shadow: -6px -6px 0 #bbb, -12px -12px 0 #eee;
-    margin-left: 12px !important;
+    //box-shadow: -6px -6px 0 #bbb, -12px -12px 0 #eee;
+    //margin-left: 12px !important;
 }
 
 /* -------------------------------------------------------------------------*/

@@ -8,8 +8,11 @@
     <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
     <!-- Featured Item -->
     <div id="featured-item">
-        <h2><?php echo __('Featured Item'); ?></h2>
-        <?php echo random_featured_items(1); ?>
+        <h2><?php echo __('Featured Items'); ?></h2>
+        <div class="row">
+          <?php echo random_featured_items(10); ?>
+        </div>
+
     </div><!--end featured-item-->
     <?php endif; ?>
 
@@ -17,7 +20,9 @@
     <!-- Featured Collection -->
     <div id="featured-collection">
         <h2><?php echo __('Featured Collection'); ?></h2>
-        <?php echo random_featured_collection(); ?>
+        <div class="row">
+          <?php echo random_featured_collection(); ?>
+        </div>
     </div><!-- end featured collection -->
     <?php endif; ?>
 
@@ -40,7 +45,9 @@ if ($recentItems):
 ?>
 <div id="recent-items">
     <h2><?php echo __('Recently Added Items'); ?></h2>
-    <?php echo recent_items($recentItems); ?>
+    <div class="row">
+      <?php echo recent_items($recentItems); ?>      
+    </div>
     <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
 </div><!--end recent-items -->
 <?php endif; ?>

@@ -8,7 +8,7 @@ gulp.task('css', function() {
     return gulp.src('./css/sass/*.scss')
         .pipe(sass({
             outputStyle: 'nested',
-            includePaths: ['./node_modules/susy/sass']
+            includePaths: ['./node_modules/bootstrap/scss']
         }).on('error', sass.logError))
         .pipe(postcss([
             autoprefixer({browsers: ['> 5%', '> 5% in US', 'last 2 versions']})
@@ -16,6 +16,6 @@ gulp.task('css', function() {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('css:watch', function() {
-    gulp.watch('./css/sass/*.scss', gulp.parallel('css'));
+gulp.task('watch', function() {
+    gulp.watch(['./css/sass/*.scss'], ['css']);
 });

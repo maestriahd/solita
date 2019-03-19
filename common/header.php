@@ -27,39 +27,44 @@
     ?>
 
     <!-- JavaScripts -->
-    <?php 
+    <?php
     queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
-    echo head_js(); 
+    echo head_js();
     ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <div id="wrap">
+    <div id="wrap" class="container">
 
         <header role="banner">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
             <?php echo theme_header_image(); ?>
+            <a href="#" class="navbar-brand" ><?php echo link_to_home_page(theme_logo()); ?></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
-            <div id="search-container" role="search">
-                <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-                <?php echo search_form(array('show_advanced' => true)); ?>
-                <?php else: ?>
-                <?php echo search_form(); ?>
-                <?php endif; ?>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <?php echo public_nav_main()->setUlClass('navbar-nav mr-auto'); ?>
             </div>
-            
-            <nav id="top-nav" role="navigation">
-                <?php echo public_nav_main(); ?>
-            </nav>
+            <form class="form-inline my-2 my-lg-0">
+              <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+              <?php echo search_form(array('show_advanced' => true)); ?>
+              <?php else: ?>
+              <?php echo search_form(); ?>
+              <?php endif; ?>
+            </form>
+          </nav>
 
         </header>
-        
+
         <article id="content" role="main" tabindex="-1">
-        
+
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

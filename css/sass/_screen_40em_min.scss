@@ -1,6 +1,6 @@
 
 /* -------------------------------------------------------------------------*/
-/* Table of Contents 
+/* Table of Contents
 -- Layout
 -- General
 -- Search
@@ -9,21 +9,21 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-#site-title { 
-    @include span(7 of 12); 
+#site-title {
+    //@include span(7 of 12);
 }
 
 #search-container {
-    @include span(5 omega of 12);
+    //@include span(5 omega of 12);
     margin-right: 0;
 }
 
 #featured {
-    @include span(7 of 12);
+    //@include span(7 of 12);
 }
 
 .pagination-nav {
-    @include span(first 6 of 12);
+    //@include span(first 6 of 12);
 }
 
 .pagination {
@@ -31,34 +31,34 @@
 }
 
 #sort-links {
-    @include span(last 6 of 12);
+    //@include span(last 6 of 12);
     margin: $spacing-unit 0;
 }
 
 #recent-items {
-    @include span(5 of 12);
+    //@include span(5 of 12);
     margin-right: 0;
 }
 
 #advanced-search-form label,
 #advanced-search-form .label,
-.field .columns.alpha { 
-    @include span(3 of 12); 
+.field .columns.alpha {
+    //@include span(3 of 12); 
 }
 
 #advanced-search-form .inputs,
 .field .columns.omega,
 .field .inputs,
-div#contribution-type-form div.inputs { 
-    @include span(9 omega of 12); 
+div#contribution-type-form div.inputs {
+    //@include span(9 omega of 12); 
 }
 
 .exhibits.summary #primary,
 .exhibits.summary #content > h1:first-of-type,
 .exhibits.show #content > h1:first-of-type,
 #exhibit-blocks,
-#exhibit-page-navigation { 
-    @include span(8 of 12); 
+#exhibit-page-navigation {
+    //@include span(8 of 12); 
 }
 
 .exhibits #exhibit-pages:not(.full) {
@@ -68,8 +68,8 @@ div#contribution-type-form div.inputs {
 }
 
 .full ~ #exhibit-blocks,
-.full ~ #exhibit-page-navigation { 
-    width: 100%; 
+.full ~ #exhibit-page-navigation {
+    width: 100%;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -91,10 +91,10 @@ div#contribution-type-form div.inputs {
     .two label {
         width: 100% !important;
     }
-    label, 
-    .label, 
-    input, 
-    select, 
+    label,
+    .label,
+    input,
+    select,
     button {
        margin: 1em 0;
     }
@@ -116,7 +116,7 @@ div#contribution-type-form div.inputs {
     padding: 0;
     z-index: 15;
     float: left;
-    background-color: white;    
+    background-color: white;
     .active {
         background-color: lighten($accent-main, 10%);
         a {
@@ -131,12 +131,12 @@ div#contribution-type-form div.inputs {
         text-decoration: none;
         padding: .5em;
 
-        &:link, 
+        &:link,
         &:visited {
             color: $accent-main;
         }
-        
-        &:hover, 
+
+        &:hover,
         &:focus {
             background-color: $accent-main;
         }
@@ -173,14 +173,14 @@ div#contribution-type-form div.inputs {
             color: white;
         }
     }
-/* focus/open states of first descendant link within a top level 
+/* focus/open states of first descendant link within a top level
    navigation item */
     .nav-item > a:focus,
     .nav-item > a.open {
         background-color: $accent-main;
     }
 
-/* open state of first descendant link within a top level 
+/* open state of first descendant link within a top level
    navigation item */
     .nav-item > a.open {
         background-color: $accent-main;
@@ -266,7 +266,7 @@ div#contribution-type-form div.inputs {
 /* Exhibits */
 
 .exhibits.summary #primary {
-    .exhibit-description, 
+    .exhibit-description,
     .exhibit-credits {
         padding-right: 1em;
     }
@@ -283,7 +283,7 @@ div#contribution-type-form div.inputs {
         }
     }
     #exhibit-page-navigation {
-        #exhibit-nav-next, 
+        #exhibit-nav-next,
         #exhibit-nav-prev {
             width: 50%;
         }
