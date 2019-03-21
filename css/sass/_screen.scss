@@ -193,7 +193,6 @@ h5, h6 {
 }
 
 h1 {
-    text-transform: uppercase;
     font-size: $base-font-size *2.5;
     clear:both;
     word-wrap: break-word;
@@ -202,7 +201,7 @@ h1 {
 h2 {
     font-size: $base-font-size * 2;
     text-transform: capitalize;
-    border-top: 4px solid $grey-light;
+    //border-top: 4px solid $grey-light;
 }
 
 h3 {
@@ -708,19 +707,7 @@ th {
     margin-bottom: $spacing-unit;
 }
 
-.item {
-    .item-img{
-        padding-bottom:.5em;
-        height: (5 * $spacing-unit);
-        float: right;
 
-        img {
-            height: 100%;
-            width: auto;
-            float: right;
-        }
-    }
-}
 
 .item-file img {
     max-width: 100%;
@@ -728,9 +715,6 @@ th {
 }
 
 .show {
-    .element {
-        border-top:1px solid $grey-light;
-    }
 
     #output-format-list {
         margin: 0;
@@ -798,7 +782,7 @@ body.files .item-file {
     }
     .collection {
         overflow: initial;
-        @extend h2;
+        //@extend h2;
         border-top:none;
     }
 }
@@ -1008,7 +992,6 @@ body.files .item-file {
 
         .exhibit-title {
             font-family:$font-family-title;
-            text-transform: uppercase;
             padding:.5em 0;
             &:after { content: ":" }
         }
