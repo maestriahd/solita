@@ -20,7 +20,7 @@ if (jQuery) {
     (function ($) {
         "use strict";
         $(document).ready(function () {
-            
+
             // hack so that the megamenu doesn't show flash of css animation after the page loads.
             setTimeout(function () {
                 $('body').removeClass('init');

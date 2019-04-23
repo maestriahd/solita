@@ -28,7 +28,12 @@
 
     <!-- JavaScripts -->
     <?php
+    queue_js_url('https://code.jquery.com/jquery-3.3.1.slim.min.js');
+    queue_js_url('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js');
+    queue_js_url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js');
     queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
+    //queue_js_file(array('jquery-accessibleMegaMenu', 'popper.min', 'bootstrap.bundle.min','minimalist', 'globals'));
+    //queue_js_file(array('minimalist'));
     echo head_js();
     ?>
 </head>
@@ -36,24 +41,29 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <div id="wrap" class="container">
+    <div id="wrap" class="container-fluid">
 
         <header role="banner">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-light">
 
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
             <?php echo theme_header_image(); ?>
-            <a href="#" class="navbar-brand" ><?php echo link_to_home_page(theme_logo()); ?></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <?php echo link_to_home_page(theme_logo(), array('class'=>'navbar-brand')); ?>
 
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <?php echo public_nav_main()->setUlClass('navbar-nav mr-auto'); ?>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+              </ul>
             </div>
+
             <form class="form-inline my-2 my-lg-0">
               <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
               <?php echo search_form(array('show_advanced' => true)); ?>
@@ -61,10 +71,15 @@
               <?php echo search_form(); ?>
               <?php endif; ?>
             </form>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
           </nav>
 
         </header>
 
-        <article id="content" role="main" tabindex="-1">
+        <article id="content" role="main" tabindex="-1" class="container">
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

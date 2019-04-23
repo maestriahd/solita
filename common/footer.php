@@ -2,7 +2,7 @@
 
         <footer role="contentinfo">
 
-          <div class="container">
+          <div class="container-fluid">
             <div class="row">
               <div class="col col-sm">
                 <div id="footer-text">

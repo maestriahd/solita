@@ -473,33 +473,7 @@ a {
 /* -------------------------------------------------------------------------*/
 /* Forms */
 
-form {
-    fieldset {
-        border:0;
-        padding:0;
-        margin: 0 0 $spacing-unit 0;
-    }
-    label, input, select {
-        margin:1em .5em 1em 0;
-    }
-}
 
-select {
-    border-radius: 0;
-    border: 1px solid $grey-light;
-    height: 1.5 * $base-line-height;
-    line-height: 1.5 * $base-line-height;
-    font-size: $base-font-size;
-    margin-right: 3px !important;
-    display: inline-block;
-}
-
-input[type=text],
-input[type=password] {
-    border: 1px solid $grey-light;
-    min-height: 1.5 * $base-line-height;
-    padding: (.25 * $spacing-unit);
-}
 
 
 
@@ -512,13 +486,10 @@ input[type=password] {
 
 #search-container {
     #search-form {
-        position:relative;
-        height: 1.5 * $base-line-height;
+        //position:relative;
+        //height: 1.5 * $base-line-height;
     }
-    input[type=text] {
-        margin: 0;
-        @include calc(width, "100% - 34px");
-    }
+
 
     &.with-advanced input[type=text] {
         @include calc(width, "100% - 76px");
@@ -1058,4 +1029,21 @@ body.files .item-file {
 .mejs-inner button {
     /* Prevents all media player buttons from showing. */
     min-height: 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Navigation */
+
+.navbar{
+  border-bottom: 2px solid black;
+}
+
+footer{
+  border-top: 2px solid black;
+}
+
+.nav-item,
+.navbar-brand{
+  font-size: $base-font-size * 1.5;
+
 }
