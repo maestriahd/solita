@@ -7965,8 +7965,7 @@ body {
 #featured-collection,
 #featured-exhibit,
 #recent-items {
-  overflow: hidden;
-  margin: 1em 0 0; }
+  overflow: hidden; }
 
 #skipnav {
   border: 0;
@@ -8056,7 +8055,7 @@ h6 {
   font-size: italic; }
 
 #site-title {
-  color: #5C3F8D;
+  color: #212529;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 40px;
@@ -8065,23 +8064,10 @@ h6 {
   margin: 20px 0; }
   #site-title a {
     text-decoration: none;
-    color: #5C3F8D; }
+    color: #212529; }
 
 /* -------------------------------------------------------------------------*/
 /* Links */
-a {
-  color: #684B98;
-  text-decoration: none; }
-  a:hover {
-    color: #c170d0;
-    text-decoration: underline; }
-  a:active {
-    color: #BE75CB; }
-  a:visited {
-    color: #8164b2; }
-  a:focus {
-    color: #5C3F8D; }
-
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
 .asc a:after,
@@ -8442,7 +8428,6 @@ th {
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
 #recent-items .item {
-  border-bottom: 1px solid #ddd;
   margin-bottom: 24px; }
 
 .item-file img {

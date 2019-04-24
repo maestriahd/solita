@@ -107,13 +107,10 @@ body {
 #featured-exhibit,
 #recent-items {
     overflow: hidden;
-    margin:1em 0 0;
+    //margin:1em 0 0;
     h2,
-    h3,
-    .item,
-    .collection,
-    .exhibit {
-        //padding: 0;
+    h3{
+
     }
 
 }
@@ -213,39 +210,19 @@ h6 {
 }
 
 #site-title {
-    color:$accent-dark;
+    color:$primary;
     font-family: $font-family-title;
     text-transform: uppercase;
     font-size: $base-font-size * 2.5;
     font-weight: bold;
     line-height: $base-line-height * 2;
     margin: 20px 0;
-    a{text-decoration:none; color:$accent-dark;}
+    a{text-decoration:none; color:$primary;}
 }
 
 /* -------------------------------------------------------------------------*/
 /* Links */
-a {
-    color: $accent-main;
-    text-decoration: none;
 
-    &:hover {
-        color: saturate($accent-light, 5%);
-        text-decoration: underline;
-    }
-
-    &:active {
-        color: $accent-light;
-    }
-
-    &:visited {
-        color: lighten($accent-main, 10%);
-    }
-
-    &:focus {
-        color: $accent-dark;
-    }
-}
 
 
 /* -------------------------------------------------------------------------*/
@@ -674,7 +651,7 @@ th {
 /* Browse and Item Pages */
 
 #recent-items .item {
-    border-bottom:1px solid $grey-light;
+    //border-bottom:1px solid $grey-light;
     margin-bottom: $spacing-unit;
 }
 
