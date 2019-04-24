@@ -44,41 +44,35 @@
     <div id="wrap" class="container-fluid">
 
         <header role="banner">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col col-sm-12">
-                  <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-                  <?php echo theme_header_image(); ?>
-                  <?php echo link_to_home_page(theme_logo(), array('class'=>'navbar-brand')); ?>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col col-sm-8">
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <?php
-                      $partial = array('common/menu-partial.phtml', 'default');
-                      $nav = public_nav_main();
-                      $nav->setUlClass('navbar-nav')->setPartial($partial);
-                      echo $nav->render();
-                    ?>
-                    </div>
-                </div>
-                <div class="col col-sm-4">
-                  <form class="form-inline my-2 my-lg-0">
-                    <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-                    <?php echo search_form(array('show_advanced' => true)); ?>
-                    <?php else: ?>
-                    <?php echo search_form(); ?>
-                    <?php endif; ?>
-                  </form>
 
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-              </div>
+          <nav class="navbar navbar-expand-md navbar-light my-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+            <?php echo theme_header_image(); ?>
+            <?php echo link_to_home_page(theme_logo(), array('class'=>'navbar-brand')); ?>
+
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <?php
+                  $partial = array('common/menu-partial.phtml', 'default');
+                  $nav = public_nav_main();
+                  $nav->setUlClass('navbar-nav float-right')->setPartial($partial);
+                  echo $nav->render();
+                ?>
+
+                <form class="form-inline my-2">
+                  <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+                  <?php echo search_form(array('show_advanced' => true)); ?>
+                  <?php else: ?>
+                  <?php echo search_form(); ?>
+                  <?php endif; ?>
+                </form>
             </div>
+
           </nav>
 
         </header>

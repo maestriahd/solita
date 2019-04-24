@@ -8737,9 +8737,8 @@ body.files .item-file {
 footer {
   border-top: 2px solid black; }
 
-.nav-item,
-.navbar-brand {
-  font-size: 24px; }
+.nav-item {
+  font-size: 16px; }
 
 /* -------------------------------------------------------------------------*/
 /* Screen - Mobile */
