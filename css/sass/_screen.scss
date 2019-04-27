@@ -25,7 +25,6 @@
 /* Layout */
 
 
-
 #search-container{
     width: 100%;
     margin-right: 0;
@@ -91,16 +90,42 @@ body {
     margin:0;
 }
 
+
+/*
+.element-set{
+  dl{
+
+    dt{
+    //margin: 0;
+    width: 30%;
+    clear: left;
+    float: left;
+    overflow: hidden;
+    line-height: $size-3;
+    //text-align: right;
+    //font-family: 'raleway-semibold';
+    padding-right: 3em;
+    }
+    dd{
+      //margin: 0;
+      width: 70%;
+      float:left;
+    }
+  }
+}
+*/
+/*
 .element-set,
 .item,
 .element,
 .collection,
 .exhibit,
 .hTagcloud {
-    //margin:1em 0;
-    //overflow: hidden;
-    //clear:both;
+    margin:1em 0;
+    overflow: hidden;
+    clear:both;
 }
+*/
 
 #featured-item,
 #featured-collection,
@@ -225,6 +250,11 @@ h6 {
 
 
 
+
+/* -------------------------------------------------------------------------*/
+/* Components */
+
+
 /* -------------------------------------------------------------------------*/
 /* General Navigation */
 
@@ -329,15 +359,23 @@ h6 {
 }
 
 .item-pagination {
-    margin: 0;
-    padding: 0;
-    border: 0;
+    //margin: 0;
+    //padding: 0;
+    //border: 0;
     overflow: hidden;
     padding:2em 0 1em 0;
 
-    .next a, .previous a {
-        @include link-button;
+    .next,
+    .previous{
+      display: inline-block;
+      width: auto;
     }
+    /*
+    .next a, .previous a {
+      @extend .btn;
+      @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+    }
+    */
 }
 
 #sort-links{
@@ -479,7 +517,6 @@ h6 {
         position: absolute;
         top: 0;
         text-align: center;
-        color: $accent-main;
 
         &:hover {
             color: #fff;
@@ -669,6 +706,17 @@ th {
         padding: 0;
         border: 0;
         overflow: hidden;
+        list-style-type: none;
+        li{
+          display: inline-block;
+          float: left;
+          margin-right: 1em;
+          a{
+            @extend .btn;
+            @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+
+          }
+        }
     }
 }
 
@@ -697,6 +745,13 @@ th {
     }
 }
 
+
+.advanced-meta{
+  .advanced-meta-header{
+
+  }
+}
+
 /* -------------------------------------------------------------------------*/
 /* File Pages */
 
@@ -714,7 +769,7 @@ body.files .item-file {
 .collections {
     .element {
         margin: 0 0 1em 0;
-        padding: 0;
+        //padding: 0;
         clear: none;
     }
 

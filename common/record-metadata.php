@@ -1,24 +1,24 @@
 <?php foreach ($elementsForDisplay as $setName => $setElements): ?>
-  <?php if ($showElementSetHeadings): ?>
-  <h2><?php echo html_escape(__($setName)); ?></h2>
-  <?php endif; ?>
+<div class="element-set">
+    <?php if ($showElementSetHeadings): ?>
+      <!--
+    <h2><?php echo html_escape(__($setName)); ?></h2>
+  -->
+    <?php endif; ?>
+    <?php foreach ($setElements as $elementName => $elementInfo): ?>
 
-  <table class="table">
-    <tbody>
-      <?php foreach ($setElements as $elementName => $elementInfo): ?>
-
-      <tr>
-        <td>
+    <dl id="<?php echo text_to_id(html_escape("$setName $elementName")); ?>" class="element row border-bottom" >
+      <dt class="col-sm-4">
           <?php echo html_escape(__($elementName)); ?>
-        </td>
-        <td>
-          <?php foreach ($elementInfo['texts'] as $text): ?>
-            <?php echo $text; ?>
-          <?php endforeach; ?>
-        </td>
-      </tr>
-    <?php endforeach; ?>
+      </dt>
+      <dd class="col-sm-8">
+        <?php foreach ($elementInfo['texts'] as $text): ?>
+            <div class="element-text"><?php echo $text; ?></div>
+        <?php endforeach; ?>
+      </dd>
+    </dl>
 
-    </tbody>
-  </table>
-<?php endforeach; ?>
+<!-- end element -->
+    <?php endforeach; ?>
+</div><!-- end element-set -->
+<?php endforeach;

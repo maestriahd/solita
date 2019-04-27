@@ -2197,7 +2197,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .show #output-format-list li a {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2215,19 +2215,21 @@ textarea.form-control {
   border-radius: 0.01rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, .show #output-format-list li a {
       transition: none; } }
-  .btn:hover {
+  .btn:hover, .show #output-format-list li a:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .show #output-format-list li a:focus, .btn.focus, .show #output-format-list li a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .show #output-format-list li a.disabled, .btn:disabled, .show #output-format-list li a:disabled {
     opacity: 0.65; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .show #output-format-list li a.disabled,
+fieldset:disabled a.btn,
+fieldset:disabled .show #output-format-list li a, .show #output-format-list li
+fieldset:disabled a {
   pointer-events: none; }
 
 .btn-primary {
@@ -2596,13 +2598,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .show #output-format-list li .btn-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.01rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .show #output-format-list li .btn-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2847,18 +2849,23 @@ input[type="button"].btn-block {
   display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .show #output-format-list li .btn-group > a,
+  .btn-group-vertical > .btn, .show #output-format-list li
+  .btn-group-vertical > a {
     position: relative;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .show #output-format-list li .btn-group > a:hover,
+    .btn-group-vertical > .btn:hover, .show #output-format-list li
+    .btn-group-vertical > a:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
-    .btn-group-vertical > .btn:focus,
-    .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .btn-group > .btn:focus, .show #output-format-list li .btn-group > a:focus, .btn-group > .btn:active, .show #output-format-list li .btn-group > a:active, .btn-group > .btn.active, .show #output-format-list li .btn-group > a.active,
+    .btn-group-vertical > .btn:focus, .show #output-format-list li
+    .btn-group-vertical > a:focus,
+    .btn-group-vertical > .btn:active, .show #output-format-list li
+    .btn-group-vertical > a:active,
+    .btn-group-vertical > .btn.active, .show #output-format-list li
+    .btn-group-vertical > a.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2871,17 +2878,19 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .show #output-format-list li .btn-group > a:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .show #output-format-list li .btn-group > a:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn, .show #output-format-list li
+.btn-group > .btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .show #output-format-list li .btn-group > a:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn, .show #output-format-list li
+.btn-group > .btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2895,11 +2904,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .show #output-format-list li .btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .show #output-format-list li .btn-group-lg > a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2910,28 +2919,34 @@ input[type="button"].btn-block {
       align-items: flex-start;
   -ms-flex-pack: center;
       justify-content: center; }
-  .btn-group-vertical > .btn,
+  .btn-group-vertical > .btn, .show #output-format-list li .btn-group-vertical > a,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .show #output-format-list li .btn-group-vertical > a:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .show #output-format-list li .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn, .show #output-format-list li
+  .btn-group-vertical > .btn-group:not(:last-child) > a {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .show #output-format-list li .btn-group-vertical > a:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn, .show #output-format-list li
+  .btn-group-vertical > .btn-group:not(:first-child) > a {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .show #output-format-list li .btn-group-toggle > a,
+.btn-group-toggle > .btn-group > .btn, .show #output-format-list li
+.btn-group-toggle > .btn-group > a {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
-  .btn-group-toggle > .btn input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .btn-group-toggle > .btn input[type="radio"], .show #output-format-list li .btn-group-toggle > a input[type="radio"],
+  .btn-group-toggle > .btn input[type="checkbox"], .show #output-format-list li
+  .btn-group-toggle > a input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .btn input[type="radio"], .show #output-format-list li
+  .btn-group-toggle > .btn-group > a input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"], .show #output-format-list li
+  .btn-group-toggle > .btn-group > a input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2998,21 +3013,39 @@ input[type="button"].btn-block {
 .input-group-append {
   display: -ms-flexbox;
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .show #output-format-list li a, .show #output-format-list li .input-group-prepend a,
+  .input-group-append .btn,
+  .input-group-append .show #output-format-list li a, .show #output-format-list li
+  .input-group-append a {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
+    .input-group-prepend .btn:focus, .input-group-prepend .show #output-format-list li a:focus, .show #output-format-list li .input-group-prepend a:focus,
+    .input-group-append .btn:focus,
+    .input-group-append .show #output-format-list li a:focus, .show #output-format-list li
+    .input-group-append a:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .show #output-format-list li a + .btn, .show #output-format-list li .input-group-prepend a + .btn, .input-group-prepend .show #output-format-list li .btn + a, .show #output-format-list li .input-group-prepend .btn + a, .input-group-prepend .show #output-format-list li a + a, .show #output-format-list li .input-group-prepend a + a,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .show #output-format-list li a + .input-group-text, .show #output-format-list li
+  .input-group-prepend a + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .show #output-format-list li .input-group-text + a, .show #output-format-list li
+  .input-group-prepend .input-group-text + a,
   .input-group-append .btn + .btn,
+  .input-group-append .show #output-format-list li a + .btn, .show #output-format-list li
+  .input-group-append a + .btn,
+  .input-group-append .show #output-format-list li .btn + a, .show #output-format-list li
+  .input-group-append .btn + a,
+  .input-group-append .show #output-format-list li a + a, .show #output-format-list li
+  .input-group-append a + a,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .show #output-format-list li a + .input-group-text, .show #output-format-list li
+  .input-group-append a + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .show #output-format-list li .input-group-text + a, .show #output-format-list li
+  .input-group-append .input-group-text + a {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3049,8 +3082,10 @@ input[type="button"].btn-block {
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.input-group-lg > .input-group-prepend > .btn, .show #output-format-list li
+.input-group-lg > .input-group-prepend > a,
+.input-group-lg > .input-group-append > .btn, .show #output-format-list li
+.input-group-lg > .input-group-append > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3064,8 +3099,10 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.input-group-sm > .input-group-prepend > .btn, .show #output-format-list li
+.input-group-sm > .input-group-prepend > a,
+.input-group-sm > .input-group-append > .btn, .show #output-format-list li
+.input-group-sm > .input-group-append > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3075,20 +3112,24 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .show #output-format-list li .input-group > .input-group-prepend > a,
 .input-group > .input-group-prepend > .input-group-text,
-.input-group > .input-group-append:not(:last-child) > .btn,
+.input-group > .input-group-append:not(:last-child) > .btn, .show #output-format-list li
+.input-group > .input-group-append:not(:last-child) > a,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .show #output-format-list li
+.input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .show #output-format-list li .input-group > .input-group-append > a,
 .input-group > .input-group-append > .input-group-text,
-.input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .btn, .show #output-format-list li
+.input-group > .input-group-prepend:not(:first-child) > a,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .btn:not(:first-child), .show #output-format-list li
+.input-group > .input-group-prepend:first-child > a:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4094,7 +4135,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .show #output-format-list li a .badge {
   position: relative;
   top: -1px; }
 
@@ -7833,7 +7874,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn) {
+  a:not(.btn):not(.show #output-format-list li a) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -7961,6 +8002,41 @@ body {
   color: #444;
   margin: 0; }
 
+/*
+.element-set{
+  dl{
+
+    dt{
+    //margin: 0;
+    width: 30%;
+    clear: left;
+    float: left;
+    overflow: hidden;
+    line-height: $size-3;
+    //text-align: right;
+    //font-family: 'raleway-semibold';
+    padding-right: 3em;
+    }
+    dd{
+      //margin: 0;
+      width: 70%;
+      float:left;
+    }
+  }
+}
+*/
+/*
+.element-set,
+.item,
+.element,
+.collection,
+.exhibit,
+.hTagcloud {
+    margin:1em 0;
+    overflow: hidden;
+    clear:both;
+}
+*/
 #featured-item,
 #featured-collection,
 #featured-exhibit,
@@ -8069,6 +8145,8 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* Links */
 /* -------------------------------------------------------------------------*/
+/* Components */
+/* -------------------------------------------------------------------------*/
 /* General Navigation */
 .asc a:after,
 .desc a:after {
@@ -8170,24 +8248,18 @@ h6 {
   content: "\f105"; }
 
 .item-pagination {
-  margin: 0;
-  padding: 0;
-  border: 0;
   overflow: hidden;
-  padding: 2em 0 1em 0; }
-  .item-pagination .next a, .item-pagination .previous a {
-    min-height: 36px;
-    padding: 6px;
-    display: block;
-    background-color: #eaeaea;
-    margin-bottom: .5em;
-    border: 0; }
-    .item-pagination .next a:hover, .item-pagination .previous a:hover {
-      background-color: #684B98;
-      color: white;
-      text-decoration: none; }
-    .item-pagination .next a:active, .item-pagination .previous a:active {
-      background-color: #BE75CB; }
+  padding: 2em 0 1em 0;
+  /*
+    .next a, .previous a {
+      @extend .btn;
+      @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+    }
+    */ }
+  .item-pagination .next,
+  .item-pagination .previous {
+    display: inline-block;
+    width: auto; }
 
 #sort-links {
   margin: 0 0 24px 0;
@@ -8288,8 +8360,7 @@ h6 {
   width: 36px;
   position: absolute;
   top: 0;
-  text-align: center;
-  color: #684B98; }
+  text-align: center; }
   #search-container .show-advanced:hover,
   #search-container button:hover {
     color: #fff; }
@@ -8438,7 +8509,32 @@ th {
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  list-style-type: none; }
+  .show #output-format-list li {
+    display: inline-block;
+    float: left;
+    margin-right: 1em; }
+    .show #output-format-list li a {
+      color: #212529;
+      border-color: #212529; }
+      .show #output-format-list li a:hover {
+        color: #fff;
+        background-color: #212529;
+        border-color: #212529; }
+      .show #output-format-list li a:focus, .show #output-format-list li a.focus {
+        box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5); }
+      .show #output-format-list li a.disabled, .show #output-format-list li a:disabled {
+        color: #212529;
+        background-color: transparent; }
+      .show #output-format-list li a:not(:disabled):not(.disabled):active, .show #output-format-list li a:not(:disabled):not(.disabled).active,
+      .show > .show #output-format-list li a.dropdown-toggle {
+        color: #fff;
+        background-color: #212529;
+        border-color: #212529; }
+        .show #output-format-list li a:not(:disabled):not(.disabled):active:focus, .show #output-format-list li a:not(:disabled):not(.disabled).active:focus,
+        .show > .show #output-format-list li a.dropdown-toggle:focus {
+          box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5); }
 
 #itemfiles .item-file {
   display: inline-block;
@@ -8470,7 +8566,6 @@ body.files .item-file {
 /* Collections */
 .collections .element {
   margin: 0 0 1em 0;
-  padding: 0;
   clear: none; }
 
 .collections .item {
