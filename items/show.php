@@ -5,7 +5,7 @@
     <h1 class="my-5 text-center"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
     <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-    <?php echo files_for_item(array('imageSize' => 'fullsize', 'imgAttributes' => array('class' => 'img-fluida'),   'linkAttributes' => array('class' => 'd-flex justify-content-center'))); ?>
+    <?php echo files_for_item(array('imageSize' => 'fullsize', 'imgAttributes' => array('class' => 'img-fluid'),   'linkAttributes' => array('class' => 'd-flex justify-content-center'))); ?>
     <?php endif; ?>
 
   </div>
