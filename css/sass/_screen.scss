@@ -276,20 +276,27 @@ h6 {
     #secondary-nav {
         margin-bottom: 1em;
         overflow: auto;
-        li {
-            margin-right:10px;
-            display: block;
-            float:left;
-            &.active a {
-                font-weight: bold;
-            }
+        ul{
+          flex-direction: row;
+          li {
+              margin-right:10px;
+              display: block;
+              float:left;
+              &.active a {
+                  font-weight: bold;
+              }
+          }
         }
+
 }
 .browse,
   .tags,
   .items {
       .secondary-nav li, #secondary-nav li{
-          @include line-button;
+          //@include line-button;
+          //display: inline-block;
+          @extend .btn;
+          @include button-outline-variant($primary, $color-hover: $primary, $active-background: color-yiq($primary), $active-border: $primary);
       }
 }
 
@@ -323,9 +330,11 @@ h6 {
     .pagination_previous a,
     .previous-page a,
     .next-page a {
-        @include link-button;
+        //@include link-button;
         margin-bottom: 0;
         line-height: $base-font-size * 1.5;
+        @extend .btn;
+        @include button-outline-variant($primary, $color-hover: white, $active-background: $primary, $active-border: $primary);
     }
 }
 
@@ -379,21 +388,26 @@ h6 {
 }
 
 #sort-links{
-    margin:0 0 $spacing-unit 0;
+    //margin:0 0 $spacing-unit 0;
     display: flex;
     justify-content: flex-end;
 
     #sort-links-list {
         overflow: auto;
         padding-left:10px;
+        list-style-type: none;
     }
     li {
         float:left;
         margin-right:10px;
-        @include line-button;
+        ///@include line-button;
         &.sorting a {
             text-decoration: underline;
             font-weight: bold;
+        }
+        a{
+          @extend .btn;
+          @include button-outline-variant($primary, $color-hover: white, $active-background: $primary, $active-border: $primary);
         }
     }
 }
@@ -460,9 +474,9 @@ h6 {
                 border-bottom:1px solid white;
             }
             a:hover {
-                color:white;
+                //color:white;
                 text-decoration: none;
-                background-color:lighten($accent-light, 10%);
+                //background-color:lighten($accent-light, 10%);
             }
         }
         .active a{
@@ -851,7 +865,8 @@ body.files .item-file {
     margin-bottom: 1.5em;
     font-style: italic;
     a{
-        @include link-button;
+        //@include link-button;
+        @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary)
         display: initial;
     }
 }
@@ -971,7 +986,8 @@ body.files .item-file {
                 float:left;
 
                 a {
-                    @include link-button;
+                    @extend .btn;
+                    @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
                     margin-bottom:0;
                 }
 
@@ -984,13 +1000,21 @@ body.files .item-file {
         & > li:nth-child(3) {
             display: block;
             clear: both;
-            a {@include line-button;}
+            a {
+              //@include line-button;
+              @extend .btn;
+              @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+            }
         }
 
         & > li:nth-child(4) {
             display: block;
             clear: left;
-            a {@include line-button;}
+            a {
+              //@include line-button;
+              @extend .btn;
+              @include button-outline-variant($primary, $color-hover: color-yiq($primary), $active-background: $primary, $active-border: $primary);
+            }
         }
 
         .exhibit-title {
