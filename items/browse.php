@@ -8,7 +8,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-12 col-md-6">
+  <div class="col-sm-12 col-md-6 align-middle">
     <nav class="items-nav navigation secondary-nav">
         <?php echo public_nav_items(); ?>
     </nav>
