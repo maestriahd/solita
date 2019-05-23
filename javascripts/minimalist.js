@@ -26,5 +26,17 @@ if (jQuery) {
                 $('body').removeClass('init');
             }, 500);
         });
+        /*
+        $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+              console.log('top');
+                  $('.navbar').addClass('white-bg');
+            }
+
+            else {
+                  $('.navbar').removeClass('white-bg');
+            }
+      });
+      */
     }(jQuery));
 }

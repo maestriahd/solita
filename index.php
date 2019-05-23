@@ -1,8 +1,11 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
+
 <?php if (get_theme_option('Homepage Text')): ?>
 <p class="intro"><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
+
+
 
 <div id="featured">
     <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
