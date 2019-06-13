@@ -83,10 +83,10 @@
                 </nav>
         </header>
       </div><!-- end wrap -->
-
+        <?php if(get_theme_option('hero')): ?>
         <div class="jumbotron-fluid hero" style="background-image:url(<?php echo hero_image_path(); ?>);">
         </div>
-
+      <?php endif; ?>
 
         <article id="content" role="main" tabindex="-1" class="container">
 
