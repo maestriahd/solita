@@ -48,7 +48,7 @@
                   <div class="container-fluid">
 
                   <div class="row w-100">
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-4">
                       <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
                       <div id="site-title">
                           <?php echo link_to_home_page(option('site_title')); ?>
@@ -57,7 +57,7 @@
                         <span class="navbar-toggler-icon"></span>
                       </button>
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-8">
                       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                           <?php
                             $partial = array('common/menu-partial.phtml', 'default');
