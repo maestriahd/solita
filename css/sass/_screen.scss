@@ -235,15 +235,16 @@ h6 {
 }
 
 #site-title {
-    color:$primary;
+    //color:$primary;
     font-family: $font-family-title;
     text-transform: uppercase;
     font-size: $base-font-size * 2;
     font-weight: bold;
     line-height: $base-line-height * 2;
     margin: 20px 0;
-    a{text-decoration:none; color:$primary;}
+    //a{text-decoration:none; color:$primary;}
 }
+
 
 /* -------------------------------------------------------------------------*/
 /* Links */
@@ -251,6 +252,8 @@ h6 {
 
 
 
+/* -------------------------------------------------------------------------*/
+/* U */
 /* -------------------------------------------------------------------------*/
 /* Components */
 
@@ -1102,11 +1105,7 @@ body.files .item-file {
 /* -------------------------------------------------------------------------*/
 /* Navigation */
 
-.navbar{
-  //border-bottom: 2px solid black;
-  //background-color: transparentize(white, .4);
-  background-color: white;
-}
+
 
 footer{
   border-top: 2px solid black;

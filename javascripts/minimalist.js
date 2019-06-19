@@ -20,23 +20,43 @@ if (jQuery) {
     (function ($) {
         "use strict";
         $(document).ready(function () {
+          var transparent = $(".navbar").data("transparent");
+          var theme = $('.navbar').data("theme");
+          var body_id = $('body').attr('id');
+          //console.log(transparent);
 
             // hack so that the megamenu doesn't show flash of css animation after the page loads.
-            setTimeout(function () {
-                $('body').removeClass('init');
-            }, 500);
-        });
-        /*
-        $(window).on("scroll", function() {
-            if($(window).scrollTop()) {
-              console.log('top');
-                  $('.navbar').addClass('white-bg');
-            }
+          setTimeout(function () {
+              $('body').removeClass('init');
+          }, 500);
+          if(transparent !== undefined && body_id === 'home'){
 
-            else {
-                  $('.navbar').removeClass('white-bg');
-            }
-      });
-      */
+            $(window).on("scroll", function() {
+                //if($(window).scrollTop() && transparent !== undefined ) {
+                if($(window).scrollTop() ) {
+                  console.log('no top');
+                  $('.navbar').removeClass('bg-transparent');
+                  $('.navbar').removeClass('navbar-dark');
+
+                  $('.navbar').addClass('bg-light navbar-light');
+
+                }
+                else {
+                  console.log('top');
+                  $('.navbar').removeClass('bg-light');
+                  $('.navbar').removeClass('navbar-light');
+                  $('.navbar').addClass('bg-transparent');
+                  if(theme === "dark"){
+                    $('.navbar').addClass('navbar-dark');
+                  }else if(theme === "light"){
+                    $('.navbar').addClass('navbar-light');
+                  }
+                }
+            });
+          }
+
+
+        });
+
     }(jQuery));
 }

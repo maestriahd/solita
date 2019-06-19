@@ -41,18 +41,34 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+
+  <?php
+    $navbar_background = null;
+
+   ?>
     <div id="wrap" class="container-fluid">
 
         <header role="banner">
-                <nav class="navbar navbar-expand-md navbar-light py-3 fixed-top">
+          <?php if(is_current_url('/')): ?>
+            <?php
+            if(get_theme_option('head_transparent') === '0'){
+              if(get_theme_option('head_theme') == 'dark'){
+                $navbar_background = 'bg-dark';
+              }else if(get_theme_option('head_theme') == 'light'){
+                $navbar_background = 'bg-light';
+              }
+            }
+             ?>
+                <nav class="navbar navbar-expand-md <?php echo (get_theme_option('head_theme') === 'dark'  ? 'navbar-dark': 'navbar-light'); ?> <?php echo $navbar_background; ?> py-3 fixed-top" <?php if (get_theme_option('head_transparent') === '1' ) echo 'data-transparent'; ?>  <?php echo (get_theme_option('head_theme') === 'dark' ? 'data-theme="dark"': 'data-theme="light"'); ?> >
+          <?php else: ?>
+                <nav class="navbar navbar-expand-md navbar-light bg-light py-3 fixed-top" >
+          <?php endif; ?>
                   <div class="container-fluid">
 
                   <div class="row w-100">
                     <div class="col-sm-12 col-md-4">
                       <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-                      <div id="site-title">
-                          <?php echo link_to_home_page(option('site_title')); ?>
-                      </div>
+                      <?php echo link_to_home_page(option('site_title'), array('class'=>'navbar-brand', 'id' => 'site-title')); ?>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
