@@ -89,7 +89,7 @@
                           </form>
                           <ul class="logos d-flex justify-content-around align-items-center">
                             <li class="mx-4">
-                              <a href="#">
+                              <a href="https://badac.uniandes.edu.co" target="_blank">
                               <!-- LOGO BADAC -->
 
                               <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -363,7 +363,7 @@
                               </a>
                             </li>
                             <li class="mx-4">
-                              <a href="#">
+                              <a href="https://facartes.uniandes.edu.co/" target="_blank">
                                 <!-- LOGO UNIANDES -->
                                 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width ="256px" height="101px" x="0px" y="0px"
