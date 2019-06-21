@@ -11455,15 +11455,26 @@ h6 {
   font-size: 1.4rem;
   text-transform: uppercase; }
 
+.navbar-dark, .navbar-light {
+  transition: background-color 0.5s ease; }
+
 .logos {
   list-style-type: none; }
-  .logos svg {
+  .logos li svg {
     max-width: 180px; }
+
+.navbar-dark #submit_search {
+  border-color: #fff;
+  color: #fff; }
 
 .navbar-dark .logos li a svg {
   color: #fff; }
   .navbar-dark .logos li a svg path {
     fill: currentColor; }
+
+.navbar-light #submit_search {
+  border-color: #000;
+  color: #000; }
 
 .navbar-light .logos li a svg {
   color: #000; }
