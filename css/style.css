@@ -11368,7 +11368,8 @@ body {
   color: #BE75CB; }
 
 .intro {
-  font-style: italic; }
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 abbr, acronym {
   border: none;

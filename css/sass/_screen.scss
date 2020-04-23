@@ -177,7 +177,9 @@ body {
 }
 
 .intro {
-    font-style: italic;
+  margin-top: $spacer * 3;
+  margin-bottom: $spacer * 3;
+  //font-style: italic;
 }
 
 abbr, acronym {

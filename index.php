@@ -2,7 +2,9 @@
 
 
 <?php if (get_theme_option('Homepage Text')): ?>
-<p class="intro"><?php echo get_theme_option('Homepage Text'); ?></p>
+<div class="intro">
+  <?php echo get_theme_option('Homepage Text'); ?>
+</div>
 <?php endif; ?>
 
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
