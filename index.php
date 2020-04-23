@@ -5,17 +5,14 @@
 <p class="intro"><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
 
-
-
-<div id="featured">
-    <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
+<?php if (get_theme_option('Display Featured Item') !== '0'): ?>
+  <div id="featured">
     <!-- Featured Item -->
     <div id="featured-item">
         <h2 class="my-5 border-primary border-bottom"><?php echo __('Featured Items'); ?></h2>
         <div class="row">
           <?php echo random_featured_items(10); ?>
         </div>
-
     </div><!--end featured-item-->
     <?php endif; ?>
 
@@ -34,8 +31,8 @@
             && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
     <!-- Featured Exhibit -->
     <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-    <?php endif; ?>
-</div> <!-- End Primary Column -->
+  </div> <!-- End Primary Column -->
+<?php endif; ?>
 
 <?php
 $recentItems = get_theme_option('Homepage Recent Items');

@@ -5,7 +5,7 @@ $description = metadata($item, array('Dublin Core', 'Description'), array('snipp
 $date = metadata($item, array('Dublin Core', 'Date'));
 ?>
 
-<div class="item record col-sm-1 col-md-4 my-4">
+<div class="item record col-sm-12 col-md-4 my-4">
 
   <div class="card">
     <?php if (metadata($item, 'has files')) {

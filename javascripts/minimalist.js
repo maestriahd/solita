@@ -55,8 +55,23 @@ if (jQuery) {
             });
           }
 
+          // let navbar = $('.navbar');
+          // let pad = navbar.height();
+          // let content = $('#content');
+          // console.log(pad);
+          // padTop(content,pad);
+          //
+          // navbar.resize(function(e){
+          //   console.log('resize');
+          //   padTop(content, pad)
+          // });
 
         });
 
+
     }(jQuery));
+}
+
+function padTop(el, padding){
+  el.css("padding-top", padding);
 }
