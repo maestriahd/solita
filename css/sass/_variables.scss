@@ -17,6 +17,16 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
+$purple-8: #302D3D;
+$purple-7: #39354F;
+$purple-6: #4B496C;
+$purple-5: #626289;
+$purple-4: #7E7EA5;
+$purple-3: #A6A6CE;
+$purple-2: #C6C4E3;
+$purple-1: #D2D1E9;
+$purple-nav: #CEC0D2;
+
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
@@ -33,6 +43,9 @@ $grays: map-merge(
   ),
   $grays
 );
+
+
+
 
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
@@ -67,8 +80,10 @@ $colors: map-merge(
 );
 
 //$primary:       $blue !default;
-$primary:       $gray-900 !default;
-$secondary:     $gray-600 !default;
+$primary:       $purple-8 !default;
+$secondary:     $purple-6 !default;
+//$primary:       $gray-900 !default;
+//$secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -275,9 +290,11 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
+
+$font-family-serif: 'Abril Fatface', cursive;
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            $font-family-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`

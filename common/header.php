@@ -64,14 +64,14 @@
             <div class="container-fluid">
 
             <div class="row w-100">
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12">
                 <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
                 <?php echo link_to_home_page(option('site_title'), array('class'=>'navbar-brand', 'id' => 'site-title')); ?>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               </div>
-              <div class="col-sm-12 col-md-8 d-flex align-items-center justify-content-around">
+              <div class="col-sm-12 d-flex align-items-center justify-content-around">
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <?php
                       $partial = array('common/menu-partial.phtml', 'default');
